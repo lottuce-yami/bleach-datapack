@@ -1,1 +1,2 @@
-# TODO: check for criteria
+function bleach:check_completion
+function bleach:check_death
