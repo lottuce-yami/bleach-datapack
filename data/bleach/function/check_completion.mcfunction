@@ -1,1 +1,0 @@
-execute if score #bleach.tracker completion matches 0 as @a[scores={dragon=1..}] run function bleach:process_completion

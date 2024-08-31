@@ -1,0 +1,1 @@
+execute as @a[scores={death=1..}] run function bleach:core/process_death

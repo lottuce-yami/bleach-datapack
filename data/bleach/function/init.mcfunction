@@ -1,4 +1,3 @@
-# TODO: group functions by namespaces
 scoreboard objectives add completion dummy
 scoreboard players set #bleach.tracker completion 0
 
