@@ -1,2 +1,1 @@
-# TODO: implement grace period during which players can cancel the shutdown
-# stop
+execute unless entity @a[scores={cancelStop=1}] run stop

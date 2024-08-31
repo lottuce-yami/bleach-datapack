@@ -1,2 +1,2 @@
 function bleach:display/text/death_title
-function bleach:core/stop_server
+function bleach:display/announce_stop

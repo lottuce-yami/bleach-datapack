@@ -1,0 +1,1 @@
+tellraw @a [{"translate":"bleach.server_stop","fallback":"The server will stop in 15 seconds."}," ",{"translate":"bleach.click_here","fallback":"Click here","clickEvent":{"action":"run_command","value":"/trigger cancelStop"}}," ",{"translate":"bleach.to_cancel","fallback":"to cancel."}]
