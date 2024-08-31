@@ -1,1 +1,4 @@
-# TODO: implement
+function bleach:firework_enderman
+function bleach:firework_star
+function bleach:firework_party
+function bleach:firework_dragon
