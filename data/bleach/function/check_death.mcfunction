@@ -1,1 +1,1 @@
-execute as @a[nbt={Health:0f}] run function bleach:announce_death
+execute as @a[scores={death=1..}] run function bleach:process_death
