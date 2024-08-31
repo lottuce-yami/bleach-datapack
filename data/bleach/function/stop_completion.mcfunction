@@ -1,1 +1,0 @@
-scoreboard players set #bleach.tracker completion 2
