@@ -2,5 +2,8 @@
     "bleach.you_win": "You win!",
     "bleach.has_defeated_dragon": "has defeated the dragon.",
     "bleach.game_over": "Game over!",
-    "bleach.has_died": "has died."
+    "bleach.has_died": "has died.",
+    "bleach.server_stop": "The server will stop in 15 seconds.",
+    "bleach.click_here": "Click here",
+    "bleach.to_cancel": "to cancel."
 }

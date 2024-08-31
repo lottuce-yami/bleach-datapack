@@ -2,5 +2,8 @@
     "bleach.you_win": "Вы выиграли!",
     "bleach.has_defeated_dragon": "победил(а) дракона.",
     "bleach.game_over": "Конец игры!",
-    "bleach.has_died": "умер(ла)."
+    "bleach.has_died": "умер(ла).",
+    "bleach.server_stop": "Сервер выключится через 15 секунд.",
+    "bleach.click_here": "Нажмите здесь",
+    "bleach.to_cancel": ", чтобы отменить."
 }
