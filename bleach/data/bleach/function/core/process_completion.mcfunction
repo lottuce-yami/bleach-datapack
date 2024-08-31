@@ -1,2 +1,2 @@
 scoreboard players set #bleach.tracker completion 1
-function bleach:display/announce_completion
+function bleach:core/announce_completion

@@ -1,2 +1,2 @@
 scoreboard players reset @s death
-function bleach:display/announce_death
+function bleach:core/announce_death
