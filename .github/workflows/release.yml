@@ -31,13 +31,11 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 path: artifacts/
-            - run: |
-                mkdir release/
-                cd ~/artifacts/bleach/
-                zip -r ~/release/bleach.zip ./*
-                cd ~/artifacts/bleach-language/
-                zip -r ~/release/bleach-language.zip ./*
-                cd ~/
+            - run: mkdir release/
+            - working-directory: artifacts/bleach/
+              run: zip -r ../../release/bleach.zip ./*
+            - working-directory: artifacts/bleach-language/
+              run: zip -r ../../release/bleach-language.zip ./*
             - uses: softprops/action-gh-release@v2
               with:
                 files: 'release/*'
