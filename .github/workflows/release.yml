@@ -33,8 +33,11 @@ jobs:
                 path: artifacts/
             - run: |
                 mkdir release/
-                zip -r release/bleach.zip artifacts/bleach/*
-                zip -r release/bleach-language.zip artifacts/bleach-language/*
+                cd ~/artifacts/bleach/
+                zip -r ~/release/bleach.zip ./*
+                cd ~/artifacts/bleach-language/
+                zip -r ~/release/bleach-language.zip ./*
+                cd ~/
             - uses: softprops/action-gh-release@v2
               with:
                 files: 'release/*'
