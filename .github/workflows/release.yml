@@ -23,6 +23,8 @@ jobs:
                 name: bleach-language
                 path: bleach-language/
     release-github:
+        permissions:
+            contents: write
         needs: package
         runs-on: ubuntu-latest
         steps:
