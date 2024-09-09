@@ -1,1 +1,18 @@
-$summon firework_rocket $(x) $(y) $(z) {LifeTime:35,FireworksItem:{id:firework_rocket,components:{fireworks:{explosions:[{shape:star,has_twinkle:1b,colors:[I;16383998,16701501]}]}}}}
+$summon firework_rocket $(x) $(y) $(z) \
+    {\
+        LifeTime: 35,\
+        FireworksItem: {\
+            id: firework_rocket,\
+            components: {\
+                fireworks: {\
+                    explosions: [\
+                        {\
+                            shape: star,\
+                            has_twinkle: 1b,\
+                            colors: [I;16383998,16701501]\
+                        }\
+                    ]\
+                }\
+            }\
+        }\
+    }
