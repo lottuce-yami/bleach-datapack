@@ -1,6 +1,7 @@
 {
 	"pack": {
-		"pack_format": 48,
+		"pack_format": 57,
+		"supported_formats": [ 57, 61 ],
 		"description": "Stops the server when the game ends"
 	}
 }
