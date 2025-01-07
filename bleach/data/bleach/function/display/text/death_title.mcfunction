@@ -1,17 +1,26 @@
 title @a times 20 300 20
 
-title @a title [\
-    {\
-        "translate": "bleach.game_over",\
-        "fallback": "Game over!",\
-        "color": "red"\
-    },\
-    " ",\
-    {\
-        "text": "\ud83d\udc80",\
-        "color": "white"\
-    }\
-]
+execute unless data storage bleach:config revive \
+    run title @a title [\
+        {\
+            "translate": "bleach.game_over",\
+            "fallback": "Game over!",\
+            "color": "red"\
+        },\
+        " ",\
+        {\
+            "text": "\ud83d\udc80",\
+            "color": "white"\
+        }\
+    ]
+
+execute if data storage bleach:config revive \
+    run title @a title [\
+        {\
+            "text": "\ud83d\udc80",\
+            "color": "white"\
+        }\
+    ]
 
 title @a subtitle [\
     {\
