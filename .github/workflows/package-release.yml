@@ -14,10 +14,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Copy common files
         run: |
           cp LICENSE pack.png -t bleach/
           cp LICENSE pack.png -t bleach-language/
+
       - name: Run PackSquash on bleach
         uses: ComunidadAylas/PackSquash-action@v4.0.3
         with:
@@ -28,6 +30,7 @@ jobs:
             ['LICENSE']
             force_include = true
           artifact_name: bleach
+
       - name: Run PackSquash on bleach-language
         uses: ComunidadAylas/PackSquash-action@v4.0.3
         with:
@@ -38,6 +41,7 @@ jobs:
             ['LICENSE']
             force_include = true
           artifact_name: bleach-language
+
   release-github:
     name: Create a GitHub release
     permissions:
@@ -49,6 +53,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: artifacts/
+          
       - name: Push artifacts to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
