@@ -1,0 +1,47 @@
+name: Package and release
+
+on:
+  push:
+    tags:
+      - 'v**'
+       
+jobs:
+  package:
+    name: Optimize and package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run PackSquash on bleach
+        uses: ComunidadAylas/PackSquash-action@v4.0.3
+        with:
+          packsquash_version: e7f6095b663766979fe06af1b7784c1e3c468780
+          options: |
+            pack_directory = 'bleach'
+            output_file_path = '/tmp/bleach.zip'
+          artifact_name: bleach
+      - name: Run PackSquash on bleach-language
+        uses: ComunidadAylas/PackSquash-action@v4.0.3
+        with:
+          packsquash_version: e7f6095b663766979fe06af1b7784c1e3c468780
+          options: |
+            pack_directory = 'bleach-language'
+            output_file_path = '/tmp/bleach-language.zip'
+          artifact_name: bleach-language
+  release-github:
+    name: Create a GitHub release
+    permissions:
+      contents: write
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+      - name: Push artifacts to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: 'artifacts/**'
